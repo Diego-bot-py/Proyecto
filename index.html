@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio</title>
-    <link rel="stylesheet" href="css/inicio.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Optimización de Consultas Informáticas</h1>
+
+    <header class="container-fluid bg-dark text-white d-flex justify-content-center py-4">
+        <h1 class="mb-6 fs-3">Optimización de Consultas Informáticas</h1>
     </header>
-    <main>
-        <section class="cuadro">
-            <h2>¡Bienvenido!</h2>
-            <p>Una solución eficiente para todos tus problemas técnicos.</p>
-            <div class="botones">
-                <a href="html/login.html" class="iniciar">Iniciar Sesión</a>
-                <a href="html/registro.html" class="registro">Registrarse</a>
+
+    <main class="container my-5">
+        <section class="row text-center">
+            <div class="col-12">
+                <img src="https://media.istockphoto.com/id/1401460590/es/foto/hombre-de-negocios-trabajando-en-una-computadora-port%C3%A1til-con-%C3%ADcono-de-administraci%C3%B3n-de.jpg?s=612x612&w=0&k=20&c=mWmY60IABgxHH6Ja6GP9J9ZZO5kb_uNCXT2WYOfI9Sw=" alt="Imagen principal" class="img-fluid mb-4">
+            </div>
+            <div class="col-12">
+                <h2 class="display-4">¡Bienvenido!</h2>
+                <p class="lead">Aqui tendras una solución eficiente para todos tus <br>problemas informáticos sobre software.</p>
+            </div>
+            <div class="col-12 d-grid gap-2 d-sm-flex justify-content-center">
+                <a href="html/login.html" class="btn btn-primary btn-lg me-sm-3">Iniciar Sesión</a>
+                <a href="html/registro.html" class="btn btn-primary btn-lg me-sm-3">Registrarse</a>
             </div>
         </section>
     </main>
-    <footer>
+
+    <footer class="bg-dark text-white text-center py-3">
         <p>2024 Optimización de Consultas Informáticas. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

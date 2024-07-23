@@ -3,58 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuario</title>
-    <link rel="stylesheet" href="../css/perfil.css">
+    <title>Editar Perfil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/barra.js" defer></script>
+    <script src="../js/editar-perfil.js" defer></script>
 </head>
 <body>
-    <header>
+    
+    <header class="py-3 bg-dark text-white">
         <div class="container">
-            <h1>Perfil</h1>
-            <nav>
-                <ul>
-                    <li><a href="pag-Usuario.html">Inicio</a></li>
-                    <li><a href="foro.html">Foro</a></li>
-                    <div style="display: none;" id="tipousuarios">
-                        <li><a href="usu-registrados.html">Administrar usuarios</a></li>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <h1 class="fs-2 mb-0">Perfil</h1>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pag-Usuario.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="foro.html">Foro</a>
+                            </li>
+                            <li class="nav-item" id="tipoUsuarios" style="display: none;">
+                                <a class="nav-link" href="usu-registrados.html">Administrar usuarios</a>
+                            </li>
+                            <li style="display: none;" id="perfil" class="nav-item">
+                                <a class="nav-link" href="perfil-usuarios.html">Perfil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="cerrarSesion">Cerrar Sesión</a>
+                            </li>
+                        </ul>
                     </div>
-                    <li><a href="perfil-usuarios.html">Perfil</a></li>
-                    <li><a id="cerrarSesion">Cerrar Sesión</a></li>
-                </ul>
+                </div>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="profile-container">
-            <div class="profile-header">
-                <img src="https://content.wepik.com/statics/20906796/preview-page0.jpg" alt="Foto de perfil" class="profile-pic">
-                <div class="profile-username">Perfil</div>
-            </div>
-            <div class="profile-stats">
-                <div class="stat">
-                    <div class="number">Id</div>
-                    <div class="label">2</div>
+    <main class="container py-4">
+        <h2>Editar Perfil</h2>
+        <form id="editProfileForm">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb-4 text-center">
+                    <div class="mb-3">
+                        <img src="https://via.placeholder.com/150" class="img-fluid rounded-circle mb-3" id="profileImage" alt="Foto de Perfil">
+                        <input type="file" class="form-control" id="profileImageUpload">
+                    </div>
                 </div>
-                <div class="stat">
-                    <div class="number">  Nombre</div>
-                    <div class="label">Diego</div>
-                </div>
-                <div class="stat">
-                    <div class="number">Apellido</div>
-                    <div class="label">Vasquez</div>
+
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8 mb-4">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Nombre de Usuario</label>
+                        <input type="text" class="form-control" id="username" placeholder="Nombre de Usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="correo@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Número de Teléfono</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Número de Teléfono">
+                    </div>
+                    <div class="mb-3">
+                        <label for="bio" class="form-label">Biografía</label>
+                        <textarea class="form-control" id="bio" rows="4" placeholder="Escribe una breve biografía"></textarea>
+                    </div>
                 </div>
             </div>
-            <div class="profile-actions">
-               <button class="btn">Editar perfil</button>
-            </div>
-        </section>
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            <br><br>
+            <br><br>
+        </form>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>2024 Optimización de Consultas Informáticas. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/perfil_usuarios.js" defer></script>
 </body>
 </html>
-<script src="../js/usuarios.js"></script>

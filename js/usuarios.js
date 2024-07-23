@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     let usuario = document.getElementById("NombreUsuario");
     var nombreCompleto = JSON.parse(localStorage.getItem('Nombre'));
-    usuario.innerHTML = nombreCompleto.nombre + " " + nombreCompleto.apellido
+    usuario.innerHTML = nombreCompleto.name + " " + nombreCompleto.lastName
    
 });
 
